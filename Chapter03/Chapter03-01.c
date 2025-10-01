@@ -10,7 +10,7 @@ int main() {
     grades[0][4] = grades[0][1]+grades[0][2]+grades[0][3];
     grades[0][5] = grades[0][4] / 3;
     
-    // 이 아래는 자유롭게 저장
+    // 이 아래부터는 자유롭게 저장
     grades[1][0] = 2;
     grades[1][1] = 100;
     grades[1][2] = 90;
@@ -19,9 +19,9 @@ int main() {
     grades[1][5] = grades[1][4] / 3;
     
     grades[2][0] = 3;
-    grades[2][1] = 100;
-    grades[2][2] = 90;
-    grades[2][3] = 80;
+    grades[2][1] = 70;
+    grades[2][2] = 80;
+    grades[2][3] = 90;
     grades[2][4] = grades[2][1]+grades[2][2]+grades[2][3];
     grades[2][5] = grades[2][4] / 3;
 
