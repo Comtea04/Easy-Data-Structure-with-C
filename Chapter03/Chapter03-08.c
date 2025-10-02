@@ -8,7 +8,7 @@ struct Info {
     char name[11];      // 10자까지
     char tel[12];       // 010-xxxx-yyyy가 010xxxxyyyy형태로 저장
     char address[31];
-    char birthday[4];
+    char birthday[5];
 };
 
 void show_list(struct Info *AddressBook, int size_AddressBook);
@@ -32,33 +32,33 @@ int main() {
     struct Info AddressBook[MAX_Infos];
     int size_AddressBook = 0;
     
-    int cursor;
+    char cursor;
     int running = 1;
     while (running) {
         printf("\n주소록 프로그램. 원하는 기능을 선택하세요\n");
         printf("1: 목록보기, 2: 추가, 3: 검색, 4: 삭제, 0: 종료\n");
         printf("-------------------------------------------: ");
-        scanf("%d", &cursor);
+        scanf(" %c", &cursor);
         
         switch (cursor) {
-        case 1:
+        case '1':
             show_list(AddressBook, size_AddressBook);
             break;
         
         
-        case 2:
+        case '2':
             add_info(AddressBook, &size_AddressBook);
             break;
             
-        case 3:
+        case '3':
             search_info(AddressBook, size_AddressBook);
             break;
         
-        case 4:
+        case '4':
             delete_info(AddressBook, &size_AddressBook);
             break;
         
-        case 0:
+        case '0':
             running = 0;
             break;
         
